@@ -1,0 +1,199 @@
+/*------- product item start -------*/
+.product-item {
+    overflow: hidden;
+    margin-bottom: 30px;
+    &:hover {
+        .product-content {
+            transform: translateY(-45px);
+        }
+    }
+}
+// product thumb
+.product {
+    &-thumb {
+        position: relative;
+        text-align: center;
+        &:hover {
+            .add-to-links {
+                opacity: 1;
+                visibility: visible;
+                animation: zoomIn 300ms;
+            }
+        }
+    }
+    &-content {
+        padding: 5px 0;
+        text-align: center;
+        position: relative;
+        transition: 0.4s;
+        background-color: $white;
+        .product-name {
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 400;
+            padding-bottom: 5px;
+            text-transform: capitalize;
+            a {
+                color: $black-soft;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        .product-item-action {
+            left: 0;
+            right: 0;
+            top: 100%;
+            position: absolute;
+
+        }
+        .price-box {
+            padding: 5px 0;
+        }
+    }
+}
+.add-to-links {
+    left: 0;
+    right: 0;
+    top: 10px;
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    a {
+        display: inline-block;
+        font-size: 25px;
+        color: $black-soft;
+        margin-right: 15px;
+        line-height: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+
+// product badge
+.product-badge {
+    display: inline-grid;
+    padding: 12px 0;
+    .product-label {
+        color: $white;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        height: 24px;
+        padding: 0 10px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:before {
+            content: "";
+            top: 0;
+            left: 100%;
+            position: absolute;
+            border-left: 12px solid $lebel-new;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+        }
+        &.new {
+            background-color: $lebel-new;
+        }
+        &.discount {
+            background-color: $lebel-discount;
+            &:before {
+                border-left: 12px solid $lebel-discount;
+            }
+        }
+    }
+}
+
+// product ratungs
+.ratings {
+    color: #f9bd22;
+    font-size: 14px;
+}
+
+// price box
+.price {
+    &-old {
+        font-size: 15px;
+        color: #999;
+        padding-left: 4px;
+    }
+    &-regular {
+        font-size: 15px;
+        line-height: 1;
+        color: #cf0016;
+    }
+}
+/*------- feature product item end -------*/
+
+
+/*-------- product list item start --------*/
+.product-content-list {
+    .ratings {
+        padding-bottom: 5px;
+    }
+    .product-name {
+        padding-bottom: 5px;
+        a {
+            color: $black-soft;
+            font-size: 18px;
+            line-height: 1.3;
+            font-weight: 400;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    p {
+        padding-bottom: 20px;
+    }
+}
+.product-list-item {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid $bdr-color;
+    // responsive
+    @media #{$lg-device, $md-device, $sm-device} {
+        padding: 20px;
+    }
+    @media #{$xs-device} {
+        display: block !important;
+    }
+    .product-thumb {
+        max-width: 30%;
+        flex-basis: 30%;
+        // responsive
+        @media #{$xs-device} {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+    }
+    .product-content-list {
+        padding-left: 20px;
+        max-width: calc(100% - 30%);
+        flex-basis: calc(100% - 30%);
+        // responsive
+        @media #{$xs-device} {
+            padding-left: 0;
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+        .price-old,
+        .price-regular {
+            font-size: 20px;
+        }
+    }
+}
+/*-------- product list item end --------*/

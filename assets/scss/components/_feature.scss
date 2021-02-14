@@ -1,0 +1,68 @@
+/*------- Feature categories section start -------*/
+.feature-menu {
+    // responsive
+    @media #{$xs-device} {
+        margin-top: 15px;
+    }
+    ul {
+        li {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1;
+            margin-left: 10px;
+            text-transform: uppercase;
+            &:first-child {
+                margin-left: 0;
+            }
+            // responsive
+            @media #{$xxs-device} {
+                font-size: 13px;
+                margin-left: 10px;
+            }
+
+            a {
+                color: $black-soft;
+                padding: 10px 10px;
+                display: block;
+                border-radius: 3px;
+
+                &:hover,
+                &.active {
+                    color: $white;
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+/*------- Feature categories section end -------*/
+
+/*------ feature product area start ------*/
+.feature-product-slider {
+    // responsive
+    @media #{$xs-device} {
+        padding: 30px 0;
+    }
+    .product-item {
+        margin-bottom: 0;
+    }
+}
+
+.product-item-wrapper {
+    @media #{$lg-device, $md-device, $sm-device} {
+        padding: 30px;
+    }
+}
+.most-viewed {
+    padding: 30px;
+}
+
+.new-products-area {
+    @media #{$md-device, $sm-device} {
+        margin-top: 48px;
+    }
+}
+/*------ feature product area end ------*/
+
+
